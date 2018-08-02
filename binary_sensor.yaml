@@ -1,0 +1,39 @@
+- platform: ping
+  host: 10.10.1.20
+  name: watch
+
+- platform: ping
+  host: 10.10.1.21
+  name: phone
+
+- platform: ping
+  host: 10.10.1.22
+  name: tab
+
+- platform: ping
+  host: 10.10.1.23
+  name: galaxybook
+
+- platform: ping
+  host: 10.10.1.30
+  name: wiiu
+
+- platform: ping
+  host: 10.10.1.40
+  name: officepc
+
+- platform: ping
+  host: 10.10.1.41
+  name: printer
+
+- platform: ping
+  host: 10.10.1.100
+  name: hypervisor
+
+- platform: ping
+  host: 10.10.1.110
+  name: winserver
+
+- platform: ping
+  host: 10.10.1.130
+  name: pgsql

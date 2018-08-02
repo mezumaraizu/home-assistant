@@ -1,0 +1,13 @@
+  - name: Arrive Home Night
+    entities:
+      input_boolean.outsidelight: on
+      input_boolean.entrylight: on
+
+  - name: Outside Lights Off
+    entities:
+      input_boolean.outsidelight: off
+
+  - name: Living Area Lights On
+    entities:
+      input_boolean.livingroomlight: on
+      input_boolean.diningroomlight: on

@@ -1,0 +1,148 @@
+default_view:
+  view: true
+  icon: mdi:home
+  entities:
+  - group.home
+  - group.occupants
+  - group.locator
+  - group.scenes
+  - group.weather
+  name: default_view
+
+lights_view:
+  name: Lights
+  view: true
+  icon: mdi:lightbulb
+  entities:
+  - group.all_lights
+
+entertainment_view:
+  name: Entertainment
+  icon: mdi:speaker
+  view: true
+  entities:
+  - group.spotify
+  - group.lguhdtv
+  - group.consoles
+
+computing:
+  name: Computing
+  view: true
+  icon: mdi:server-network
+  entities:
+  - group.mobile_devices
+  - group.computers
+  - group.printer
+  - group.server_status
+  - group.router_status
+
+home:
+  entities:
+  - input_boolean.automation
+  - sensor.homestate
+  name: Home
+  view: false
+
+occupants:
+  entities:
+  - device_tracker.nate
+  name: Occupants
+  view: false
+
+locator:
+  entities:
+  - device_tracker.nate_car
+  name: Vehicles
+  view: false
+
+scenes:
+  entities:
+  - scene.arrive_home_night
+  - scene.living_area_lights_on
+  - scene.outside_lights_off
+  name: Scenes
+  view: false
+
+weather:
+  entities:
+  - sensor.bom_perth_air_temp_c
+  - sensor.bom_perth_relative_humidity
+  - sensor.bom_perth_wind_speed_kmh
+  - sensor.bom_perth_wind_direction
+  - sensor.bom_perth_rain_today
+  name: Weather
+  view: false
+
+all_lights:
+  entities:
+  - input_boolean.outsidelight
+  - input_boolean.entrylight
+  - input_boolean.livingroomlight
+  - input_boolean.diningroomlight
+  name: All Lights
+  view: false
+
+spotify:
+  entities:
+  - input_select.playlist
+  - input_boolean.shuffle
+  - media_player.spotify
+  name: Spotify
+  view: false
+
+consoles:
+  entities:
+  - sensor.mezumaraizu
+  - sensor.wiiu
+  name: Consoles
+  view: false
+
+lguhdtv:
+  entities:
+  - media_player.lg_uhd_tv
+  name: LG UHD TV
+  view: false
+
+mobile_devices:
+  entities:
+  - sensor.watch
+  - sensor.phone
+  - sensor.tab
+  - sensor.galaxybook
+  name: Mobile Devices
+  view: false
+
+computers:
+  entities:
+  - sensor.officepc
+  - sensor.hypervisor
+  - sensor.winserver
+  - sensor.pgsql
+  name: Computers
+  view: false
+
+printer:
+  entities:
+  - sensor.printer
+  - sensor.black_ink
+  - sensor.cyan_ink
+  - sensor.magenta_ink
+  - sensor.yellow_ink
+  name: Printer
+
+server_status:
+  entities:
+  - sensor.processor_use
+  - sensor.memory_use_percent
+  - sensor.disk_use_percent_
+  - sensor.last_boot
+  name: Server Status
+  view: false
+
+router_status:
+  entities:
+  - sensor.speedtest_ping
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  name: Router Status
+  view: false

@@ -1,0 +1,167 @@
+- id: '001'
+  alias: Lights On Arrive Home
+  trigger:
+  - platform: state
+    entity_id: group.occupants
+    from: 'Not Home'
+    to: 'Home'
+  condition:
+  - condition: state
+    entity_id: input_boolean.automation
+    state: 'on'
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - service: scene.turn_on
+    entity_id: scene.arrive_home_night
+
+- id: '002'
+  alias: Lights On Sunset
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:05:00
+  condition:
+  - condition: state
+    entity_id: input_boolean.automation
+    state: 'on'
+  - condition: state
+    entity_id: group.all_devices
+    state: 'Home'
+  action:
+  - service: scene.turn_on
+    data:
+      entity_id: scene.downstairs_lights
+
+- id: '003'
+  alias: Outside Lights Off Sunrise
+  trigger:
+  - platform: sun
+    event: sunrise
+  action:
+  - service: scene.turn_on
+    entity_id: scene.outside_lights_off
+
+- id: '004'
+  alias: Notify Update Available
+  trigger:
+  - platform: state
+    entity_id: updater.updater
+  action:
+  - service: notify.notify
+    data:
+      message: "New version {{ states.updater.updater.state }} of Home Assistant is available"
+
+- id: '007'
+  alias: Stop Spotify
+  trigger:
+  - platform: state
+    entity_id: input_select.playlist
+    to: 'None'
+  action:
+  - service: media_player.media_play_pause
+    data:
+      entity_id: media_player.spotify
+
+- id: '008'
+  alias: Play Coffee Chill
+  trigger:
+  - platform: state
+    entity_id: input_select.playlist
+    to: 'Coffee + Chill'
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify
+      media_content_id: 'spotify:user:spotify:playlist:37i9dQZF1DXa1BeMIGX5Du'
+      media_content_type: playlist
+
+- id: '009'
+  alias: Play Electronic Vibes
+  trigger:
+  - platform: state
+    entity_id: input_select.playlist
+    to: 'Electronic Vibes'
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify
+      media_content_id: 'spotify:user:spotify:playlist:37i9dQZF1DX3Liv35LmYo1'
+      media_content_type: playlist
+
+- id: '010'
+  alias: Play House Party
+  trigger:
+  - platform: state
+    entity_id: input_select.playlist
+    to: 'House Party'
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify
+      media_content_id: 'spotify:user:spotify:playlist:37i9dQZF1DXd5DCuoVuFY3'
+      media_content_type: playlist
+
+- id: '011'
+  alias: Play Indie Mixtape
+  trigger:
+  - platform: state
+    entity_id: input_select.playlist
+    to: 'Indie Mixtape'
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify
+      media_content_id: 'spotify:user:spotify:playlist:37i9dQZF1DX5WTH49Vcnqp'
+      media_content_type: playlist
+
+- id: '012'
+  alias: Play Local Noise
+  trigger:
+  - platform: state
+    entity_id: input_select.playlist
+    to: 'Local Noise'
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify
+      media_content_id: 'spotify:user:spotify:playlist:37i9dQZF1DWVHkDVXyDP0L'
+      media_content_type: playlist
+
+- id: '013'
+  alias: Load Spotify
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.spotify
+      shuffle: 'true'
+
+- id: '014'
+  alias: Turn Shuffle Off
+  trigger:
+  - platform: state
+    entity_id: input_boolean.shuffle
+    from: 'on'    
+    to: 'off'
+  action:
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.spotify
+      shuffle: 'false'
+
+- id: '015'
+  alias: Turn Shuffle On
+  trigger:
+  - platform: state
+    entity_id: input_boolean.shuffle
+    from: 'off'    
+    to: 'on'
+  action:
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.spotify
+      shuffle: 'true'

@@ -1,0 +1,18 @@
+  - platform: webostv
+    host: 10.10.1.32
+    mac: A0:6F:AA:83:59:26
+    name: LG UHD TV
+    filename: webostv.conf
+    customize: 
+      sources:
+        - livetv
+        - tvguide
+        - screenshare
+        - xboxone
+        - wiiu
+        - netflix
+        - youtube
+
+  - platform: spotify
+    client_id: !secret client_id
+    client_secret: !secret client_secret

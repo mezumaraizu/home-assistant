@@ -1,0 +1,10 @@
+playlist:
+  name: Spotify Playlist
+  options:
+   - None
+   - Electronic Vibes
+   - Coffee + Chill
+   - House Party
+   - Indie Mixtap
+   - Local Noise
+  initial: None

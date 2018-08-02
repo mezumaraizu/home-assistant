@@ -1,0 +1,23 @@
+  automation:
+    name: Automation
+    initial: on
+
+  shuffle:
+    name: Shuffle
+    initial: on
+
+  outsidelight:
+    name: Outside Light
+    initial: off
+
+  entrylight:
+    name: Entry Light
+    initial: off
+
+  livingroomlight:
+    name: Living Room Light
+    initial: off
+
+  diningroomlight:
+    name: Dining Room Light
+    initial: off

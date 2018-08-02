@@ -1,0 +1,4 @@
+- platform: template
+  sensors:
+    homestate:
+      value_template: '{% if is_state("device_tracker.nate", "Home") %}Occupied{% else %}Pets only{% endif %}'

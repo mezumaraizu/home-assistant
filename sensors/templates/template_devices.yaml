@@ -1,0 +1,50 @@
+- platform: template
+  sensors:
+    watch:
+      value_template: '{% if is_state("binary_sensor.watch", "on") %}Wireless{% else %}Bluetooth{% endif %}'
+
+- platform: template
+  sensors:
+    phone:
+      value_template: '{% if is_state("binary_sensor.phone", "on") %}Online{% else %}Offline{% endif %}'
+
+- platform: template
+  sensors:
+    tab:
+      value_template: '{% if is_state("binary_sensor.tab", "on") %}Online{% else %}Offline{% endif %}'
+
+- platform: template
+  sensors:
+    galaxybook:
+      value_template: '{% if is_state("binary_sensor.galaxybook", "on") %}Online{% else %}Offline{% endif %}'
+
+- platform: template
+  sensors:
+    wiiu:
+      value_template: '{% if is_state("binary_sensor.wiiu", "on") %}Online{% else %}Offline{% endif %}'
+
+- platform: template
+  sensors:
+    officepc:
+      value_template: '{% if is_state("binary_sensor.officepc", "on") %}Online{% else %}Offline{% endif %}'
+
+- platform: template
+  sensors:
+    hypervisor:
+      value_template: '{% if is_state("binary_sensor.hypervisor", "on") %}Online{% else %}Offline{% endif %}'
+      
+- platform: template
+  sensors:
+    printer:
+      value_template: '{% if is_state("binary_sensor.printer", "on") %}Online{% else %}Offline{% endif %}'
+
+- platform: template
+  sensors:
+    winserver:
+      value_template: '{% if is_state("binary_sensor.winserver", "on") %}Online{% else %}Offline{% endif %}'
+
+- platform: template
+  sensors:
+    pgsql:
+      value_template: '{% if is_state("binary_sensor.pgsql", "on") %}Online{% else %}Offline{% endif %}'
+

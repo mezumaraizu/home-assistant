@@ -1,0 +1,138 @@
+input_select.playlist:
+  friendly_name: Select Playlist
+  entity_picture: /local/spotifyico.png
+
+input_boolean.shuffle:
+  friendly_name: Shuffle
+  entity_picture: /local/shuffle.png
+
+input_boolean.automation:
+  friendly_name: Automation
+  entity_picture: /local/automation.png
+
+sensor.homestate:
+  friendly_name: Status
+  entity_picture: /local/homestate.png
+
+input_boolean.outsidelight:
+  friendly_name: Outside Lights
+  entity_picture: /local/light_off.png
+
+input_boolean.entrylight:
+  friendly_name: Entry Light
+  entity_picture: /local/light_off.png
+
+input_boolean.livingroomlight:
+  friendly_name: Living Room Light
+  entity_picture: /local/light_off.png
+
+input_boolean.diningroomlight:
+  friendly_name: Dining Room Light
+  entity_picture: /local/light_off.png
+
+sensor.mezumaraizu:
+  friendly_name: Xbox One
+
+sensor.watch:
+  friendly_name: Gear Watch
+  entity_picture: /local/watch.png
+
+sensor.phone:
+  friendly_name: Galaxy Mobile
+  entity_picture: /local/phone.png
+
+sensor.tab:
+  friendly_name: Galaxy Tab
+  entity_picture: /local/tab.png
+
+sensor.galaxybook:
+  friendly_name: Galaxy Book 
+  entity_picture: /local/galaxybook.png
+
+sensor.wiiu:
+  friendly_name: Wii U  
+  entity_picture: /local/wiiu.png
+
+sensor.officepc:
+  friendly_name: Office PC  
+  entity_picture: /local/officepc.png
+
+sensor.hypervisor:
+  friendly_name: Hypervisor
+  entity_picture: /local/server.png
+
+sensor.winserver:
+  friendly_name: Windows Server
+  entity_picture: /local/server.png
+
+sensor.pgsql:
+  friendly_name: Database Server
+  entity_picture: /local/server.png
+
+sensor.printer:
+  friendly_name: Epson WF-2660
+  entity_picture: /local/printer.png
+
+sensor.processor_use:
+  friendly_name: Processor Use
+  entity_picture: /local/cpu.png
+
+sensor.memory_use_percent:
+  friendly_name: Memory Use
+  entity_picture: /local/memory.png
+
+sensor.disk_use_percent_:
+  friendly_name: Disk Use
+  entity_picture: /local/disk.png
+
+sensor.last_boot:
+  friendly_name: Last Boot
+  entity_picture: /local/date.png
+
+sensor.black_ink:
+  entity_picture: /local/ink_bl.png
+
+sensor.cyan_ink:
+  entity_picture: /local/ink_cy.png
+
+sensor.magenta_ink:
+  entity_picture: /local/ink_ma.png
+
+sensor.yellow_ink:
+  entity_picture: /local/ink_ye.png
+
+sensor.bom_perth_air_temp_c:
+  friendly_name: Temperature
+  entity_picture: /local/temp.png
+
+sensor.bom_perth_relative_humidity:
+  friendly_name: Humidity
+  entity_picture: /local/humid.png
+
+sensor.bom_perth_wind_speed_kmh:
+  friendly_name: Wind Speed
+  entity_picture: /local/windsock.png
+
+sensor.bom_perth_wind_direction:
+  friendly_name: Wind Direction
+  entity_picture: /local/compass.png
+
+sensor.bom_perth_rain_today:
+  friendly_name: Rainfall
+  entity_picture: /local/rain.png
+
+weblink.router:
+  friendly_name: Administrator Login
+  entity_picture: /local/router.png
+
+sensor.speedtest_ping:
+  friendly_name: Ping Response
+  entity_picture: /local/ping.png
+
+sensor.speedtest_download:
+  friendly_name: Download Speed
+  entity_picture: /local/download.png
+
+sensor.speedtest_upload:
+  friendly_name: Upload Speed
+  entity_picture: /local/upload.png
